@@ -4,7 +4,7 @@ A native PS Vita port of Pocket Mortys. Originally released for iOS/Android/PC a
 Built with Unity 2018.2.19f1 (PSP2), based on version 1.94 apk.
 
 # Installation
-No VPK is provided directly. Release contains an xdelta patch that must be applied to your own copy of the original game. You need to have the Pocket_Mortys_version 1.94.apk (must be the correct hash).
+No VPK is provided directly. Release contains an xdelta patch that must be applied to your own copy of the original game. You need to have the Pocket_Mortys_version 1.94.apk (must be the correct hash & it must have the data files with it).
 
 Install PocketMortys_Stub.vpk on your Vita with VitaShell
 Download [xdelta3](https://github.com/jmacd/xdelta) [(Windows builds here)](https://github.com/jmacd/xdelta-gpl/releases) and put xdelta3.exe, the Pocket_Morties_version1.94.apk and PocketMortysData.xdelta in the same folder
