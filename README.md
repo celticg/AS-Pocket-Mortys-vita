@@ -10,7 +10,6 @@ Install PocketMortys_Stub.vpk on your Vita with VitaShell
 Download [xdelta3](https://github.com/jmacd/xdelta) [(Windows builds here)](https://github.com/jmacd/xdelta-gpl/releases) and put xdelta3.exe, the Pocket_Morties_version1.94.apk and PocketMortysData.xdelta in the same folder
 
 Open a command prompt in that folder and run:
-
 ./xdelta3 -d -B 134217728 -s NameofYourAPK.apk PocketMortysData.xdelta PocketMortysData.zip
 
 Extract PocketMortysData.zip and copy its contents into ux0:app/POMO00137/ and merge with the existing files
