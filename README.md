@@ -12,6 +12,7 @@ Open a command prompt in that folder and run:
 ./xdelta3 -d -B 134217728 -s NameofYourAPK.apk PocketMortysData.xdelta PocketMortysData.zip
 
 Extract PocketMortysData.zip and copy its contents into ux0:app/POMO00137/ and merge with the existing files
+
 Launch Pocket Mortys
 
 Saves are stored in ux0:/data/PocketMortys/. Saves survive updates and reinstalls as they are separate from the game's actual data files.
