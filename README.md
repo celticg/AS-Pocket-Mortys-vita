@@ -1,5 +1,5 @@
 # AS-Pocket-Mortys-vita
-A native PS Vita port of Pocket Mortys. Originally released for iOS/Android/PC and shut down along with its servers in April of 2026, this port was meant to get the offline version of the game running natively on the ps vita so players could still enjoy this amazing game.
+A native PS Vita port of Pocket Mortys. Originally released for iOS/Android/PC and shut down along with its servers in April of 2026, this port was meant to get the offline version of the game running natively on the ps vita so players could still enjoy this amazing game. I am not a developer and used claude and other resources to help me achieve this.
 
 Built with Unity 2018.2.19f1 (PSP2), based on version 1.94 apk.
 
