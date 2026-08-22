@@ -6,15 +6,12 @@ Built with Unity 2018.2.19f1 (PSP2), based on version 1.94 apk.
 # Installation
 No VPK is provided directly. Release contains an xdelta patch that must be applied to your own copy of the original game. You need to have the Pocket_Mortys_version 1.94.apk (must be the correct hash & it must have the data files with it).
 
-Install PocketMortys_Stub.vpk on your Vita with VitaShell
-Download [xdelta3](https://github.com/jmacd/xdelta) [(Windows builds here)](https://github.com/jmacd/xdelta-gpl/releases) and put xdelta3.exe, the Pocket_Morties_version1.94.apk and PocketMortysData.xdelta in the same folder
+  1. Install 'PocketMortys_Stub.vpk' on your Vita with VitaShell
+  2. Download [xdelta3](https://github.com/jmacd/xdelta) [(Windows builds here)](https://github.com/jmacd/xdelta-gpl/releases) and put 'xdelta3.exe', the 'Pocket_Morties_version1.94.apk' and 'PocketMortysData.xdelta' in the same folder
+  3. Open a command prompt in that folder and run:
+'./xdelta3 -d -B 134217728 -s NameofYourAPK.apk PocketMortysData.xdelta PocketMortysData.zip'
+  4. Extract 'PocketMortysData.zi'p and copy its contents into ux0:app/POMO00137/ and merge with the existing files
+  5. Launch Pocket Mortys
 
-Open a command prompt in that folder and run:
-./xdelta3 -d -B 134217728 -s NameofYourAPK.apk PocketMortysData.xdelta PocketMortysData.zip
-
-Extract PocketMortysData.zip and copy its contents into ux0:app/POMO00137/ and merge with the existing files
-
-Launch Pocket Mortys
-
-Saves are stored in ux0:/data/PocketMortys/. Saves survive updates and reinstalls as they are separate from the game's actual data files.
+Saves are stored in 'ux0:/data/PocketMortys/'. Saves survive updates and reinstalls as they are separate from the game's actual data files.
 
