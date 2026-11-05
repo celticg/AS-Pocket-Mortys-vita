@@ -1,0 +1,21 @@
+{
+  "target": "Media/Modules/Il2CppAssemblies.suprx",
+  "note": "Strip, Kochava SDK. Replaces the first 4 bytes (a 32-bit Thumb-2 stmdb prologue) of the three Kochava coroutine MoveNext() methods that construct UnityEngine.WWW with 'movs r0,#0 ; bx lr' (00 20 70 47), so each iterator reports 'finished' on its first step and never reaches its WWW call. Targets: U3CInit_KVU3Ec__Iterator0::MoveNext (kvinit, control.kochava.com/track/kvinit) at module-relative 0x6d01fc (suprx 7148284); U3CprocessQueueU3Ec__Iterator1::MoveNext (kvTracker / bidder.kochava.com/adserver, also the only Kochava Application.OpenURL site) at 0x6b6e64 (suprx 7044964); U3CKochavaAttributionTimerFiredU3Ec__Iterator3::MoveNext (kvquery) at 0x6b5ea2 (suprx 7040930). suprx offset = module-relative + 0x1100 (equals ELF file offset + 0x1000; same mapping that places patch 0002). Method addresses from arm-none-eabi-nm on the unpatched il2cpp ELF; each old value was compared byte-for-byte against both the ELF and the shipped suprx. U3CclearQueueU3Ec__Iterator2 has no WWW call and is left alone. Kochava.Start/Init, the singleton assignment and the scene component are untouched so game-side Kochava.FireEvent callers keep a valid instance.",
+  "patches": [
+    {
+      "offset": 7148284,
+      "old": "2de9f04f",
+      "new": "00207047"
+    },
+    {
+      "offset": 7044964,
+      "old": "2de9f04f",
+      "new": "00207047"
+    },
+    {
+      "offset": 7040930,
+      "old": "2de9f047",
+      "new": "00207047"
+    }
+  ]
+}
